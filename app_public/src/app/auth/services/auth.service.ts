@@ -1,12 +1,12 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import User from "../models/user.model";
+import { User } from "../models/user.model";
 import { Observable, Subject } from "rxjs";
 
 @Injectable({
     'providedIn': 'root'
 })
-export default class AuthService {
+export class AuthService {
     private API_URL = "http://localhost:3000/api/user/";
     private TOKEN_KEY = "token";
 

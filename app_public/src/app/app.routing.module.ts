@@ -5,14 +5,28 @@ import { CatComponent } from "./cat/cat.component";
 import { AddCatComponent } from "./add-cat/add-cat.component";
 import { LoginComponent } from "./auth/login/login.component";
 import { RegisterComponent } from "./auth/register/register.component";
-import { authGuard } from "./auth/auth.guard";
+import { authGuard } from "./auth/utils/auth.guard";
 
 const routes: Routes = [
-    {path: "", component: HomeComponent},
-    {path: "login", component: LoginComponent},
-    {path: "register", component: RegisterComponent},
-    {path: "addCat", component: AddCatComponent, canActivate: [authGuard]},
-    {path: "cat/:id", component : CatComponent, canActivate: [authGuard]},
+    {
+      path: "", component: HomeComponent
+    },
+    {
+      path: "login", component: LoginComponent
+    },
+    {
+      path: "register", component: RegisterComponent
+    },
+    {
+      path: "addCat", component: AddCatComponent, canActivate: [authGuard]
+    },
+    {
+      path: "cat/:id", component : CatComponent, canActivate: [authGuard]
+    },
+    {
+      path: 'auth',
+      loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+    },
 ]
 
 @NgModule({
@@ -23,4 +37,4 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export default class AppRoutingModule {}
+export class AppRoutingModule {}
