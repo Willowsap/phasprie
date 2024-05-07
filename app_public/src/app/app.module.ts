@@ -5,10 +5,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HomeComponent } from "./home/home.component";
-import { CatComponent } from "./cat/cat.component";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
-import { AddCatComponent } from "./add-cat/add-cat.component";
 import { AuthInterceptor } from "./auth/utils/auth.interceptor";
 import { AuthModule } from "./auth/auth.module";
 import { AppMaterialModule } from "./app.material.module";
@@ -18,10 +16,8 @@ import { AppRoutingModule }from "./app.routing.module";
     declarations: [
         AppComponent,
         HomeComponent,
-        CatComponent,
         HeaderComponent,
         FooterComponent,
-        AddCatComponent,
     ],
     imports: [
         BrowserModule,

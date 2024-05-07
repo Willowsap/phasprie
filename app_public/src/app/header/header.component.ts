@@ -21,7 +21,6 @@ export class HeaderComponent implements OnInit {
     links = {
         loggedIn: [
             {path: "/", name: "Home"},
-            {path: "addCat", name: "Add Cat"},
         ],
         loggedOut: [
             {path: "/", name: "Home"},
